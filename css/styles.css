@@ -1,0 +1,147 @@
+body {
+  color: #ccc;
+  font-family: Glegoo;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.8em;
+  letter-spacing: 0px;
+  background-image: none;
+  background-position: top left;
+  background-size: auto;
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-color: #111;
+  font-family: sans-serif;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+#site {
+  margin: 0 auto;
+}
+
+/* Start Everything related to the header */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  font-family: Roboto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  height: 50px;
+  width: 100%;
+  padding: 10px 10px;
+}
+
+header nav a:link,
+header nav a:visited,
+header h1,
+header h2,
+header h3 {
+  color: #666;
+  transition: 0.2s ease;
+}
+
+header nav a:hover,
+header nav a:active {
+  transition: 0.7s ease;
+  opacity: 0.8;
+  color: #ccc;
+}
+
+header nav .active-link a,
+header nav a.active {
+  color: #ccc;
+}
+
+#navBlock {
+  margin-top: 7.3%;
+  position: absolute;
+  z-index: 2;
+}
+
+#navBlock nav,
+#categoryNav nav {
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2px 0px 28px;
+}
+
+#navBlock nav ul,
+#categoryNav nav ul {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-family: sans-serif;
+}
+
+#navBlock nav ul li,
+#categoryNav nav ul li {
+  display: inline-block;
+  text-align: center;
+}
+
+#navBlock nav ul li a,
+#categoryNav nav ul li a {
+  padding: 0.8em;
+}
+
+#logo-image {
+  margin-left: 18.5%;
+}
+
+#logo-image img {
+  max-width: 60%;
+}
+/* End Everything related to header */
+
+/* Start Footer and Pagination Business */
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 2.5rem;
+}
+
+.pagination {
+  padding: 0;
+  height: 56px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.pagination ul {
+  display: block;
+  width: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.pagination ul li {
+  font-size: 14px;
+  color: #666;
+  display: inline-block;
+  *display: block;
+  *zoom: 1;
+  height: 56px;
+  line-height: 56px;
+  white-space: nowrap;
+  margin: 0 10px;
+}
+
+.next a {
+  color: #ccc;
+}
+/* End Footer and Pagination business */
