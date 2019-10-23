@@ -1,6 +1,6 @@
 body {
-  color: #ccc;
-  font-family: Glegoo;
+  color: #bfbfbf;
+  font-family: Open Sans;
   font-weight: 400;
   font-style: normal;
   line-height: 1.8em;
@@ -31,6 +31,7 @@ a:hover {
 header {
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 header nav ul {
@@ -71,29 +72,25 @@ header nav a.active {
   z-index: 2;
 }
 
-#navBlock nav,
-#categoryNav nav {
+#navBlock nav {
   width: auto;
   text-align: center;
   margin: 0 auto;
   padding: 2px 0px 28px;
 }
 
-#navBlock nav ul,
-#categoryNav nav ul {
+#navBlock nav ul {
   font-size: 14px;
   line-height: 1.5em;
   font-family: sans-serif;
 }
 
-#navBlock nav ul li,
-#categoryNav nav ul li {
+#navBlock nav ul li {
   display: inline-block;
   text-align: center;
 }
 
-#navBlock nav ul li a,
-#categoryNav nav ul li a {
+#navBlock nav ul li a {
   padding: 0.8em;
 }
 
@@ -116,9 +113,18 @@ header nav a.active {
 
 /* Start Things related to the page body */
 #pageContent {
-  max-width: 800px;
+  max-width: 1000px;
   padding: 0 0 20px;
-  margin: 0 auto;
+  margin: -50px auto;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+#pageContent h2 {
+  color: #ccc;
+  font-weight: bold;
+  font-size: 1.6em;
 }
 /* End Things related to the page body */
 
@@ -162,7 +168,7 @@ footer {
 }
 /* End Footer and Pagination business */
 
-/* Things relating to account */
+/* Start Things relating to account */
 #accountsBody {
   width: auto;
   text-align: center;
@@ -182,3 +188,27 @@ footer {
   width: 56px;
   height: 56px;
 }
+/* End Things relating to account */
+
+/* Start About Body */
+#leftColumn {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 24px;
+  width: 400px;
+  vertical-align: top;
+}
+
+#leftColumn img {
+  width: 400px;
+  top: 0;
+}
+
+#rightColumn {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+  text-align: left;
+  width: 400px;
+}
+/* End About Body */
