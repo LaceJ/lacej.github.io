@@ -103,8 +103,24 @@ header nav a.active {
 
 #logo-image img {
   max-width: 60%;
+  transition: 0.3s ease;
+  opacity: 0.8;
+}
+
+#logo-image img:hover {
+  max-width: 60%;
+  transition: 0.3s ease;
+  opacity: 1;
 }
 /* End Everything related to header */
+
+/* Start Things related to the page body */
+#pageContent {
+  max-width: 800px;
+  padding: 0 0 20px;
+  margin: 0 auto;
+}
+/* End Things related to the page body */
 
 /* Start Footer and Pagination Business */
 footer {
@@ -145,3 +161,24 @@ footer {
   color: #ccc;
 }
 /* End Footer and Pagination business */
+
+/* Things relating to account */
+#accountsBody {
+  width: auto;
+  text-align: center;
+}
+
+#accountsBody ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 0.8em;
+}
+
+#accountsBody a {
+  color: #ccc;
+}
+
+#accountsBody img {
+  width: 56px;
+  height: 56px;
+}
