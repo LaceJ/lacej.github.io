@@ -29,8 +29,7 @@ a:hover {
 
 /* Start Everything related to the header */
 header {
-  display: flex;
-  justify-content: center;
+  margin-top: 2vh;
   z-index: 2;
 }
 
@@ -67,8 +66,10 @@ header nav a.active {
 }
 
 #navBlock {
-  margin-top: 7.3%;
   position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 15vh;
   z-index: 2;
 }
 
@@ -95,17 +96,21 @@ header nav a.active {
 }
 
 #logo-image {
-  margin-left: 18.5%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
 }
 
 #logo-image img {
-  max-width: 60%;
+  width: 50vh;
   transition: 0.3s ease;
   opacity: 0.8;
 }
 
 #logo-image img:hover {
-  max-width: 60%;
+  width: 50vh;
   transition: 0.3s ease;
   opacity: 1;
 }
@@ -113,12 +118,15 @@ header nav a.active {
 
 /* Start Things related to the page body */
 #pageContent {
-  max-width: 1000px;
-  padding: 0 0 20px;
-  margin: -50px auto;
-  position: relative;
+  width: auto;
   text-align: center;
-  z-index: 2;
+  max-width: 1000px;
+  margin-top: 25vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #pageContent h2 {
@@ -191,6 +199,11 @@ footer {
 /* End Things relating to account */
 
 /* Start About Body */
+#columnWrapper {
+  width: auto;
+  text-align: center;
+}
+
 #leftColumn {
   display: inline-block;
   margin-right: 10px;
@@ -212,3 +225,9 @@ footer {
   width: 400px;
 }
 /* End About Body */
+
+/* Start Projects Preview*/
+#projectPreview {
+  margin: 10px;
+}
+/* End Projects Preview */
