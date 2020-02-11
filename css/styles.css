@@ -120,13 +120,14 @@ header nav a.active {
 #pageContent {
   width: auto;
   text-align: center;
-  max-width: 1000px;
-  margin-top: 25vh;
+  max-width: 100vw;
+  margin-top: 22vh;
   position: absolute;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  z-index: 3;
 }
 
 #pageContent h2 {
@@ -177,24 +178,44 @@ footer {
 /* End Footer and Pagination business */
 
 /* Start Things relating to account */
-#accountsBody {
+#accountsTop {
   width: auto;
   text-align: center;
 }
 
-#accountsBody ul li {
+#accountsTop ul li {
   display: inline-block;
   text-align: center;
   padding: 0.8em;
 }
 
-#accountsBody a {
+#accountsTop a {
   color: #ccc;
 }
 
-#accountsBody img {
+#accountsTop img {
   width: 56px;
   height: 56px;
+}
+
+#accountsBottom {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  color: #ccc;
+}
+
+#accountsBottom li {
+  color: #848484;
+}
+
+#accountsBottom a {
+  color: #ccc;
+  tab-size: 8;
+}
+
+.highlightNumber {
+  color: #f55;
 }
 /* End Things relating to account */
 
