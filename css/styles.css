@@ -20,7 +20,15 @@ a:visited,
 a:active,
 a:focus,
 a:hover {
+  color: #666;
+  transition: 0.4s ease;
   text-decoration: none;
+}
+
+a:hover {
+  transition: 0.7s ease;
+  opacity: 0.8;
+  color: #ccc;
 }
 
 #site {
@@ -50,7 +58,7 @@ header h1,
 header h2,
 header h3 {
   color: #666;
-  transition: 0.2s ease;
+  transition: 0.4s ease;
 }
 
 header nav a:hover,
@@ -120,7 +128,7 @@ header nav a.active {
 #pageContent {
   width: auto;
   text-align: center;
-  max-width: 100vw;
+  max-width: 60vw;
   margin-top: 22vh;
   position: absolute;
   left: 0;
@@ -137,45 +145,61 @@ header nav a.active {
 }
 /* End Things related to the page body */
 
-/* Start Footer and Pagination Business */
-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 2.5rem;
+/* Start Projects Preview */
+.projectRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
 }
-
-.pagination {
-  padding: 0;
-  height: 56px;
-  max-width: 1000px;
-  margin: 0 auto 30px;
-}
-
-.pagination ul {
-  display: block;
-  width: auto;
-  overflow: hidden;
-  text-align: center;
-}
-
-.pagination ul li {
-  font-size: 14px;
-  color: #666;
+.projectRow a {
   display: inline-block;
-  *display: block;
-  *zoom: 1;
-  height: 56px;
-  line-height: 56px;
-  white-space: nowrap;
-  margin: 0 10px;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 30px;
+  text-decoration: none;
 }
 
-.next a {
-  color: #ccc;
+.projectRow a:nth-of-type(2n) {
+  margin-right: 0;
 }
-/* End Footer and Pagination business */
+
+@media screen and (min-width: 50em) {
+  .projectRow a {
+    width: calc(30% - 10px);
+  }
+
+  .projectRow a:nth-of-type(2n) {
+    margin-right: 30px;
+  }
+
+  .projectRow a:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+.projectRow a:hover img {
+  transform: scale(1.15);
+}
+
+.projectRow figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.projectRow figcaption {
+  margin-top: 15px;
+}
+
+.projectRow img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform 0.2s ease-in-out;
+}
+/* End Projects Preview */
 
 /* Start Things relating to account */
 #accountsTop {
@@ -189,42 +213,13 @@ footer {
   padding: 0.8em;
 }
 
-#accountsTop a {
-  color: #ccc;
-}
-
 #accountsTop img {
   width: 56px;
   height: 56px;
 }
-
-#accountsBottom {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-  color: #ccc;
-}
-
-#accountsBottom li {
-  color: #848484;
-}
-
-#accountsBottom a {
-  color: #ccc;
-  tab-size: 8;
-}
-
-.highlightNumber {
-  color: #f55;
-}
 /* End Things relating to account */
 
 /* Start About Body */
-#columnWrapper {
-  width: auto;
-  text-align: center;
-}
-
 #leftColumn {
   display: inline-block;
   margin-right: 10px;
@@ -246,9 +241,3 @@ footer {
   width: 400px;
 }
 /* End About Body */
-
-/* Start Projects Preview*/
-#projectPreview {
-  margin: 10px;
-}
-/* End Projects Preview */
