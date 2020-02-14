@@ -4,6 +4,8 @@ body {
   font-family: sans-serif;
   line-height: 1.8em;
   text-align: center;
+  margin: 0;
+  margin-top: 8px;
 }
 
 ul,
@@ -34,22 +36,6 @@ a:hover {
 }
 
 /* Start Everything related to the header */
-#navBlock {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-top: 160px;
-  z-index: 1;
-}
-
-#navBlock nav a {
-  font-size: 14px;
-  line-height: 1.5em;
-  padding: 0.8em;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-}
-
 #logoImage img {
   width: 350px;
   transition: 0.3s ease;
@@ -62,6 +48,54 @@ a:hover {
   opacity: 1;
 }
 
+#topNav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 160px;
+  z-index: 1;
+}
+
+#topNav nav a {
+  font-size: 14px;
+  line-height: 1.5em;
+  padding: 0.8em;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+#sideNav {
+  top: 30%;
+  padding: 20px;
+  border-radius: 0px 8px 8px 0;
+  position: fixed;
+  background: #222;
+  transition: 0.4s ease;
+  opacity: 0.1;
+}
+
+#sideNav:hover {
+  transition: 0.7s ease;
+  opacity: 1;
+}
+
+.btn {
+  width: 100px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  color: #ccc;
+  background-color: #111;
+}
+
+.btn.active,
+.btn:active,
+.btn:hover {
+  color: #111;
+  background-color: #ccc;
+}
+
 /* Start Projects Preview */
 .projects {
   margin: 0 auto;
@@ -71,9 +105,14 @@ a:hover {
   grid-template-columns: repeat(auto-fit, 400px);
 }
 
+.project.show {
+  display: inline-block;
+}
+
 .project {
   overflow: hidden;
   max-height: 20rem;
+  display: none;
 }
 
 .project img {
