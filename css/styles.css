@@ -92,6 +92,12 @@ a:hover {
   transform: scale(1.15);
 }
 
+@media (min-width: 1920px) {
+  .projects {
+    grid-template-columns: repeat(3, 400px);
+  }
+}
+
 /* Start About */
 #accountsTop p {
   margin: 0;
@@ -130,6 +136,6 @@ a:hover {
 }
 
 /* For debugging/testing */
-/* * {
+* {
   outline: 1px solid red;
-} */
+}
