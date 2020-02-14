@@ -1,25 +1,17 @@
 body {
-  color: #bfbfbf;
-  font-family: Open Sans;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.8em;
-  letter-spacing: 0px;
-  background-image: none;
-  background-position: top left;
-  background-size: auto;
-  background-attachment: scroll;
-  background-repeat: repeat;
   background-color: #111;
+  color: #bfbfbf;
   font-family: sans-serif;
+  line-height: 1.8em;
+  text-align: center;
 }
 
-a,
-a:link,
-a:visited,
-a:active,
-a:focus,
-a:hover {
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
   color: #666;
   transition: 0.4s ease;
   text-decoration: none;
@@ -30,132 +22,64 @@ a:hover {
   color: #ccc;
 }
 
-#site {
-  margin: 0 auto;
+.active {
+  color: #ccc;
+}
+
+#pageContent {
+  width: 70%;
+  margin: auto;
 }
 
 /* Start Everything related to the header */
-header {
-  margin-top: 2vh;
-  z-index: 2;
-}
-
-header nav ul {
-  font-family: Roboto;
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  height: 50px;
-  width: 100%;
-  padding: 10px 10px;
-}
-
-header nav a:link,
-header nav a:visited,
-header h1,
-header h2,
-header h3 {
-  color: #666;
-  transition: 0.4s ease;
-}
-
-header nav a:hover,
-header nav a:active {
-  transition: 0.7s ease;
-  opacity: 0.8;
-  color: #ccc;
-}
-
-header nav .active-link a,
-header nav a.active {
-  color: #ccc;
-}
-
 #navBlock {
   position: absolute;
   left: 0;
   right: 0;
   margin-top: 15vh;
-  z-index: 2;
+  z-index: 1;
 }
 
-#navBlock nav {
+/* #navBlock nav {
   width: auto;
-  text-align: center;
   margin: 0 auto;
-  padding: 2px 0px 28px;
-}
+} */
 
-#navBlock nav ul {
+#navBlock nav a {
   font-size: 14px;
   line-height: 1.5em;
   font-family: sans-serif;
-}
-
-#navBlock nav ul li {
-  display: inline-block;
-  text-align: center;
-}
-
-#navBlock nav ul li a {
   padding: 0.8em;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
 }
 
-#logo-image {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  text-align: center;
+#logoImage {
+  z-index: 2;
 }
 
-#logo-image img {
-  width: 50vh;
+#logoImage img {
+  width: 36vh;
   transition: 0.3s ease;
   opacity: 0.8;
 }
 
-#logo-image img:hover {
-  width: 50vh;
+#logoImage img:hover {
   transition: 0.3s ease;
   opacity: 1;
 }
 /* End Everything related to header */
 
-/* Start Things related to the page body */
-#pageContent {
-  width: auto;
-  text-align: center;
-  max-width: 80vw;
-  margin-top: 22vh;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 3;
-}
-
-#pageContent h2 {
-  color: #ccc;
-  font-weight: bold;
-  font-size: 1.6em;
-}
-/* End Things related to the page body */
-
 /* Start Projects Preview */
 .projects {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 24px;
   display: grid;
   grid-gap: 1rem;
 }
 
 .project {
   overflow: hidden;
-
   max-height: 20rem;
 }
 
@@ -190,46 +114,52 @@ header nav a.active {
 }
 /* End Projects Preview */
 
-/* Start Things relating to account */
+/* Start About */
 #accountsTop {
-  width: auto;
-  text-align: center;
+  margin: 0 auto;
 }
 
-#accountsTop ul li {
+#accountsTop p {
+  margin: 0;
+}
+
+#accountsTop li {
   display: inline-block;
-  text-align: center;
-  padding: 0.8em;
+  padding: 0 0.8rem 0.8rem 0.8em;
 }
 
 #accountsTop img {
-  width: 56px;
-  height: 56px;
+  width: 3vw;
+  height: auto;
 }
-/* End Things relating to account */
 
-/* Start About Body */
 #columns {
-  margin-top: -40px;
+  margin: 0 auto;
 }
-#leftColumn {
+
+.columns {
   display: inline-block;
-  margin-right: 10px;
-  margin-top: 24px;
   width: 400px;
-  vertical-align: top;
+}
+
+#columns h2 {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 #leftColumn img {
+  vertical-align: top;
+  padding-right: 20px;
   width: 400px;
-  top: 0;
 }
 
 #rightColumn {
-  display: inline-block;
-  margin-left: 10px;
   vertical-align: top;
   text-align: left;
-  width: 400px;
+  padding-left: 20px;
 }
-/* End About Body */
+/* End About */
+
+* {
+  outline: 1px solid red;
+}
