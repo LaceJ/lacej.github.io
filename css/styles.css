@@ -176,6 +176,45 @@ a:hover {
   min-width: 400px;
 }
 
+/* For Tablet */
+@media only screen and (max-device-width: 1024px) {
+  #pageContent {
+    width: 90%;
+    margin: auto;
+  }
+  #sideNav {
+    display: none;
+  }
+  .projects {
+    grid-template-columns: repeat(auto-fit, 400px);
+  }
+  .project p {
+    padding-top: 0px;
+    word-wrap: break-word;
+  }
+
+  .columns {
+    grid-template-columns: repeat(auto-fit, 400px);
+  }
+
+  .column img {
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(auto-fit, 300px);
+  }
+  .columns {
+    grid-template-columns: repeat(auto-fit, 300px);
+  }
+
+  .column img {
+    min-width: 300px;
+  }
+}
+
 /* For Mobile */
 @media only screen and (max-device-width: 480px) {
   #logoImage img {
@@ -193,6 +232,10 @@ a:hover {
   .projects {
     grid-template-columns: repeat(1, 320px);
   }
+  .project p {
+    padding-top: 0px;
+    word-wrap: break-word;
+  }
 
   .columns {
     grid-template-columns: repeat(1, 320px);
@@ -201,9 +244,6 @@ a:hover {
   .columns p {
     text-overflow: wrap;
     margin-bottom: 12px;
-  }
-  .column img {
-    min-width: 300px;
   }
 
   #accountsTop img {
