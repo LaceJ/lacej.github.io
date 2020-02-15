@@ -51,7 +51,7 @@
 	<header>
 		<div id="topNav" role="navigation">
 			<nav>
-				<a href="/" class="active">Projects</a>
+				<a href="/" class="activePage">Projects</a>
 				<a href="About.html">About</a>
 			</nav>
 		</div>
@@ -119,13 +119,9 @@
 	<script>
 		$(".showcase").show();
 		$('.btn').click(function () {
-			filterSelection(this);
-		});
-
-		function filterSelection(button) {
 			$('a.project').hide();
-			$("." + button.id).show();
-		}
+			$("." + this.id).show();
+		});
 
 		$('.btn').click(function () {
 			$('.active').not($(this)).removeClass('active');

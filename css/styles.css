@@ -10,6 +10,7 @@ body {
 
 ul,
 h2,
+h3,
 p {
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@ a:hover {
   color: #ccc;
 }
 
-.active {
+.activePage {
   color: #ccc;
 }
 
@@ -83,6 +84,7 @@ a:hover {
   width: 100px;
   padding: 10px;
   margin: 0 auto;
+  margin-top: 10px;
   display: block;
   border: none;
   color: #ccc;
@@ -172,6 +174,42 @@ a:hover {
 .column img {
   width: 100%;
   min-width: 400px;
+}
+
+/* For Mobile */
+@media only screen and (max-device-width: 480px) {
+  #logoImage img {
+    width: 300px;
+  }
+
+  #topNav {
+    margin-top: 130px;
+  }
+
+  #sideNav {
+    display: none;
+  }
+
+  .projects {
+    grid-template-columns: repeat(1, 320px);
+  }
+
+  .columns {
+    grid-template-columns: repeat(1, 320px);
+  }
+
+  .columns p {
+    text-overflow: wrap;
+    margin-bottom: 12px;
+  }
+  .column img {
+    min-width: 300px;
+  }
+
+  #accountsTop img {
+    width: 50px;
+    height: auto;
+  }
 }
 
 /* For debugging/testing */
