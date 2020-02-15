@@ -203,8 +203,11 @@ a:hover {
 }
 
 @media only screen and (max-device-width: 768px) {
+  #sideNav {
+    display: none;
+  }
   .projects {
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, 260px);
   }
   .columns {
     grid-template-columns: repeat(auto-fit, 300px);
