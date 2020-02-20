@@ -85,8 +85,8 @@ a:hover {
   padding: 10px;
   margin: 0 auto;
   margin-top: 10px;
-  display: block;
   border: none;
+  transition: 0.4s ease;
   color: #ccc;
   background-color: #111;
 }
@@ -96,6 +96,7 @@ a:hover {
 .btn:hover {
   color: #111;
   background-color: #ccc;
+  transition: 0.7s ease;
 }
 
 /* Start Projects Preview */
@@ -107,14 +108,9 @@ a:hover {
   grid-template-columns: repeat(auto-fit, 400px);
 }
 
-.project.show {
-  display: inline-block;
-}
-
 .project {
   overflow: hidden;
   max-height: 20rem;
-  display: none;
 }
 
 .project img {
@@ -254,8 +250,3 @@ a:hover {
     height: auto;
   }
 }
-
-/* For debugging/testing */
-/* * {
-  outline: 1px solid red;
-} */
