@@ -131,7 +131,7 @@ a:hover {
 
 @media (min-width: 1920px) {
   .projects {
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(auto-fit, 400px);
   }
 }
 

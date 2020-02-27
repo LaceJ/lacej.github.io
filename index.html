@@ -76,7 +76,6 @@
 					<select class="btn year">
 						<option selected>Year</option>
 						<option id="2020">2020</option>
-						<option id="2019">2019</option>
 					</select>
 				</li>
 			</ul>
@@ -85,44 +84,29 @@
 
 	<section id="pageContent">
 		<div class="projects">
-			<a class="project showcase react 2020" href="">
+			<a class="project showcase react 2020" href="underconstruction.html">
 				<img src="images/pathfinding.png">
-				<p>Pathfinding Algorithm Visualiser</p>
+				<p>Project 1</p>
 			</a>
-			<a class="project showcase react 2020" href="">
+			<a class="project showcase react 2020" href="underconstruction.html">
 				<img src="images/sorting.png">
-				<p>Sorting Algorithm Visualiser</p>
+				<p>Project 2</p>
 			</a>
-			<a class="project showcase react 2019" href="">
+			<a class="project showcase react 2020" href="underconstruction.html">
 				<img src="images/travelling.png">
-				<p>Travelling Salesman Problem Visualiser</p>
+				<p>Project 3</p>
 			</a>
-			<a class="project showcase cpp 2020" href="">
-				<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg">
+			<a class="project showcase react 2020" href="underconstruction.html">
+				<img src="images/voting.png">
 				<p>Project 4</p>
 			</a>
-			<a class="project showcase python 2020" href="">
-				<img
-					src="https://www.montereybayaquarium.org/-/m/images/animal-guide/octopus-and-kin/chambered-nautilus-and-light.jpg?bc=white&h=801&mh=916&mw=1222&w=1064&usecustomfunctions=1&cropx=89&cropy=0">
+			<a class="project showcase python 2020" href="underconstruction.html">
+				<img src="images/referent.png">
 				<p>Project 5</p>
 			</a>
-			<a class="project showcase cpp 2020" href="">
+			<a class="project showcase cpp 2020" href="underconstruction.html">
 				<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg">
 				<p>Project 6</p>
-			</a>
-			<a class="project cpp 2019" href="">
-				<img
-					src="https://www.montereybayaquarium.org/-/m/images/animal-guide/octopus-and-kin/chambered-nautilus-and-light.jpg?bc=white&h=801&mh=916&mw=1222&w=1064&usecustomfunctions=1&cropx=89&cropy=0">
-				<p>Project 7</p>
-			</a>
-			<a class="project python 2019" href="">
-				<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg">
-				<p>Project 8</p>
-			</a>
-			<a class="project cpp 2019" href="">
-				<img
-					src="https://www.montereybayaquarium.org/-/m/images/animal-guide/octopus-and-kin/chambered-nautilus-and-light.jpg?bc=white&h=801&mh=916&mw=1222&w=1064&usecustomfunctions=1&cropx=89&cropy=0">
-				<p>Project 9</p>
 			</a>
 		</div>
 	</section>
@@ -149,11 +133,11 @@
 				var filtered = filters.filter(Boolean);
 				$('.project').hide();
 				$('.project').each(function (i, obj) {
-					if (filtered.length == 2) {
+					if (filtered.length > 1) {
 						if ($(this).hasClass(filtered[0]) && $(this).hasClass(filtered[1])) {
 							$(this).show()
 						}
-					} else if (filtered.length == 0) {
+					} else if (filtered.length < 1) {
 						$(this).show()
 					} else {
 						if ($(this).hasClass(filtered[0])) {
