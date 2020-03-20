@@ -38,6 +38,7 @@ a:hover {
 
 /* Start Everything related to the header */
 #logoImage img {
+  margin-top: 10px;
   width: 350px;
   transition: 0.3s ease;
   opacity: 0.8;
@@ -171,6 +172,12 @@ a:hover {
   width: 100%;
   min-width: 400px;
 }
+/* Start Underconstruction */
+.notfound p {
+  margin: 0 auto;
+  width: 630px;
+  text-align: left;
+}
 
 /* For Tablet */
 @media only screen and (max-device-width: 1024px) {
@@ -198,7 +205,7 @@ a:hover {
   }
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 760px) {
   #sideNav {
     display: none;
   }
@@ -211,6 +218,12 @@ a:hover {
 
   .column img {
     min-width: 300px;
+  }
+  .notfound img {
+    max-width: 300px;
+  }
+  .notfound p {
+    max-width: 300px;
   }
 }
 
