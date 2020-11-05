@@ -78,21 +78,6 @@ a:hover {
   text-transform: uppercase;
 }
 
-#sideNav {
-  top: 30%;
-  padding: 20px;
-  border-radius: 0px 8px 8px 0;
-  position: fixed;
-  background: #222;
-  transition: 0.4s ease;
-  opacity: 0.1;
-}
-
-#sideNav:hover {
-  transition: 0.7s ease;
-  opacity: 1;
-}
-
 .btn {
   width: 100px;
   padding: 10px;
@@ -290,6 +275,13 @@ a:hover {
   transition: all 0.5s;
 }
 
+.split {
+  border-color: #666;
+  width: 415px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .filterButton  a:before {
   font-family: "Glyphicons Halflings";
   content: "⮟";
@@ -302,6 +294,3 @@ a:hover {
  -moz-transform: rotate(180deg);
  transform: rotate(180deg);
 } 
-.filterButton.flip {
-  margin-bottom: 0px;
-}
