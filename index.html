@@ -49,24 +49,26 @@
 			style="display:none;visibility:hidden"></iframe></noscript>
 
 	<header>
+		<!-- <div class="blocked"></div> -->
 		<div id="topNav" role="navigation">
 			<nav>
 				<a href="/" class="activePage">Projects</a>
 				<a href="About.html">About</a>
 			</nav>
 		</div>
+		
 		<a href="/" id="logoImage">
 			<img src="images/Logo.png">
-		</a>
+		</a>		
+	</header>
 
-		<div id="sideNav">
-			Categories
+	<section id="pageContent">
+		<div class="filterButton">Categories <a></a></div>
+		<div id="slideNav">
 			<ul style="list-style: none;">
 				<li>
 					<button class="btn press active" id="showcase"> Showcase</button>
 					<button class="btn press" id="project"> Show all</button>
-				</li>
-				<li>
 					<select class="btn language">
 						<option selected val="default">Language</option>
 						<option id="react">ReactJS</option>
@@ -80,9 +82,6 @@
 				</li>
 			</ul>
 		</div>
-	</header>
-
-	<section id="pageContent">
 		<div class="projects">
 			<a class="project showcase react 2020" href="underconstruction.html">
 				<img src="images/pathfinding.png">
@@ -176,6 +175,17 @@
 				$(this).toggleClass('active');
 			}
 		});
+
+		//
+		$('#slideNav').hide();
+		$('.filterButton').click(function () {
+			$('#slideNav').slideToggle();
+		});
+
+		$(".filterButton").click(function () {
+			$(this).hasClass('flip') ? $(this).removeClass('flip') : $(this).addClass('flip')		
+		});
+
 	</script>
 </body>
 
