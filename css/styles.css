@@ -294,3 +294,9 @@ a:hover {
  -moz-transform: rotate(180deg);
  transform: rotate(180deg);
 } 
+
+#gpgkey {
+  color: #bfbfbf;
+  background-color :#111; 
+  text-align: center;
+}
