@@ -49,146 +49,82 @@
 			style="display:none;visibility:hidden"></iframe></noscript>
 
 	<header>
-		<!-- <div class="blocked"></div> -->
 		<div id="topNav" role="navigation">
 			<nav>
-				<a href="/" class="activePage">Projects</a>
-				<a href="About.html">About</a>
+				<a class="activePage">Projects</a>
+				<a href="https://lacej.github.io/about">About</a>
 			</nav>
 		</div>
-		
+
 		<a href="/" id="logoImage">
 			<img src="images/Logo.png">
-		</a>		
+		</a>
 	</header>
 
 	<section id="pageContent">
 		<div class="filterButton">Categories <a></a></div>
-		
-		<div id="slideNav">
-			<hr class="split">
-			<ul style="list-style: none;">
-				<li>
-					<button class="btn press active" id="showcase"> Showcase</button>
-					<button class="btn press" id="project"> Show all</button>
-					<select class="btn language">
-						<option selected val="default">Language</option>
-						<option id="react">ReactJS</option>
-						<option id="python">Python</option>
-						<option id="cpp">C++</option>
-					</select>
-					<select class="btn year">
-						<option selected>Year</option>
-						<option id="2020">2020</option>
-					</select>
-				</li>
-			</ul>
-			<!-- <hr class="split"> -->
-		</div>
-		<div class="projects">
-			<a class="project showcase react 2020" href="underconstruction.html">
-				<img src="images/pathfinding.png">
-				<p>Project 1</p>
-			</a>
-			<a class="project showcase react 2020" href="underconstruction.html">
-				<img src="images/sorting.png">
-				<p>Project 2</p>
-			</a>
-			<a class="project showcase react 2020" href="underconstruction.html">
-				<img src="images/travelling.png">
-				<p>Project 3</p>
-			</a>
-			<a class="project showcase 2020" href="underconstruction.html">
-				<img src="images/voting.png">
-				<p>Project 4</p>
-			</a>
-			<a class="project showcase 2020" href="underconstruction.html">
-				<img src="images/referent.png">
-				<p>Project 5</p>
-			</a>
-			<a class="project showcase 2020" href="underconstruction.html">
-				<img src="images/wheel.png">
-				<p>Project 6</p>
-			</a>
-			<a class="project python 2020" href="underconstruction.html">
-				<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg">
-				<p>Placeholder Project</p>
-			</a>
-			<a class="project python 2020" href="underconstruction.html">
-				<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg">
-				<p>Placeholder Project</p>
-			</a>
-			<a class="project cpp 2020" href="underconstruction.html">
-				<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg">
-				<p>Placeholder Project</p>
-			</a>
-		</div>
+
+		<input type="radio" id="All" name="categories" value="All" checked>
+		<input type="radio" id="ReactJS" name="categories" value="ReactJS">
+		<input type="radio" id="C++" name="categories" value="C++">
+		<input type="radio" id="Python" name="categories" value="Python">
+		<ol id="slideNav" class="filters">
+			<li>
+				<label for="All">All</label>
+			</li>
+			<li>
+				<label for="ReactJS">ReactJS</label>
+			</li>
+			<li>
+				<label for="C++">C++</label>
+			</li>
+			<li>
+				<label for="Python">Python</label>
+			</li>
+		</ol>
+		<ol class="projects">
+			<li class="project" data-category="Python">
+				<a href="underconstruction.html" target="_blank" id="content">
+					<img src="images/pathfinding.png" alt="">
+					<p>Project 1</p>
+				</a>
+			</li>
+			<li class="project" data-category="ReactJS">
+				<a href="underconstruction.html" target="_blank">
+					<img src="images/travelling.png" alt="">
+					<p>Project 2</p>
+				</a>
+			</li>
+			<li class="project" data-category="C++ Python">
+				<a href="underconstruction.html" target="_blank">
+					<img src="images/sorting.png" alt="">
+					<p>Project 2</p>
+				</a>
+			</li>
+			<li class="project" data-category="C++">
+				<a href="underconstruction.html" target="_blank">
+					<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg"
+						alt="">
+					<p>Project 4</p>
+				</a>
+			</li>
+		</ol>
 	</section>
 
 	<footer>
 	</footer>
 
 	<script>
-		//Filters based on drop down menus
-		$('select').change(function () {
-			var filters = [$('select.language').children("option:selected").attr('id'),
-			$('select.year').children("option:selected").attr('id')]
-
-			$('.btn').removeClass('active');
-
-			if (filters.every(v => v === filters[0]) && $('#showcase').hasClass('active')) {
-				$('.project').hide();
-				$('.showcase').show();
-			}
-			else if (filters.every(v => v === filters[0]) && $('#project').hasClass('active')) {
-				$('.project').show();
-			}
-			else {
-				var filtered = filters.filter(Boolean);
-				$('.project').hide();
-				$('.project').each(function (i, obj) {
-					if (filtered.length > 1) {
-						if ($(this).hasClass(filtered[0]) && $(this).hasClass(filtered[1])) {
-							$(this).show()
-						}
-					} else if (filtered.length < 1) {
-						$(this).show()
-					} else {
-						if ($(this).hasClass(filtered[0])) {
-							$(this).show()
-						}
-					}
-				});
-			}
-		});
-
-		//Sets drop downs back to their default value when a button is pressed
-		$('.project').hide();
-		$('.showcase').show();
-		$('.press').click(function () {
-			$('a.project').hide();
-			$("." + this.id).show();
-			$('select').prop('selectedIndex', 0);
-		});
-
-		//Switches the active status of the buttons
-		$('.press').click(function () {
-			if (!$(this).hasClass('active')) {
-				$('.active').not($(this)).removeClass('active');
-				$(this).toggleClass('active');
-			}
-		});
-
-		//
+		//Toggles the slide down menu
 		$('#slideNav').hide();
 		$('.filterButton').click(function () {
 			$('#slideNav').slideToggle();
 		});
 
+		//Rotates the arrow next to the slide down menu
 		$(".filterButton").click(function () {
-			$(this).hasClass('flip') ? $(this).removeClass('flip') : $(this).addClass('flip')		
+			$(this).hasClass('flip') ? $(this).removeClass('flip') : $(this).addClass('flip')
 		});
-
 	</script>
 </body>
 
