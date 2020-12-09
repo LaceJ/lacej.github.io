@@ -134,29 +134,38 @@ a:hover {
 }
 
 /* FILTERS ------------------------------------------------------------------ */
-.filterButton {
+#filterButton {
+  position: absolute;
+  appearance: none;
+  left: -100%;
+  top: -100%;
+}
+
+#filterButton + label {
   cursor: pointer;
+  padding: 10px;
+  color: var(--dgrey);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: 12px;
-  color: #666;
-  transition: all 0.5s;
+  font-size: 14px;
 }
 
-.filterButton  a:before {
-  font-family: "Glyphicons Halflings";
+#filterButton + label:after {
+  display: inline-block; /* doesn't animate without this? */
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -ms-transition: -ms-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   content: "⮟";
-  font-size: 16px;
-  display: inline-block;
-  transition: all 0.5s;
-
 }
 
-.filterButton.flip a:before {
+#filterButton:checked + label:after {
+  display: inline-block; /* doesn't animate without this? */
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
- } 
+}
 
 #slideNav {
   margin-bottom: 10px;
@@ -164,7 +173,7 @@ a:hover {
 
 .filters {
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 0.4rem;
 }
 
 .filters * {
@@ -211,7 +220,6 @@ input[type="radio"] {
   display: none;
 }
 
-
 /* ABOUT ------------------------------------------------------------------- */
 #accountsTop p {
   margin: 0;
@@ -254,7 +262,6 @@ input[type="radio"] {
   background-color: var(--black);
   text-align: center;
 }
-
 
 /* DELIBERATE 404 ---------------------------------------------------------- */
 .notfound p {

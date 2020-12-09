@@ -62,7 +62,8 @@
 	</header>
 
 	<section id="pageContent">
-		<div class="filterButton">Categories <a></a></div>
+		<input type="checkbox" name="filterButton" id="filterButton" />
+		<label for="filterButton">Categories</label>
 
 		<input type="radio" id="All" name="categories" value="All" checked>
 		<input type="radio" id="ReactJS" name="categories" value="ReactJS">
@@ -117,13 +118,8 @@
 	<script>
 		//Toggles the slide down menu
 		$('#slideNav').hide();
-		$('.filterButton').click(function () {
+		$('#filterButton').click(function () {
 			$('#slideNav').slideToggle();
-		});
-
-		//Rotates the arrow next to the slide down menu
-		$(".filterButton").click(function () {
-			$(this).hasClass('flip') ? $(this).removeClass('flip') : $(this).addClass('flip')
 		});
 	</script>
 </body>
