@@ -27,7 +27,7 @@ body {
   line-height: 1.8em;
   text-align: center;
   margin: 0;
-  margin-top: 8px;
+  margin-top: 1vh;
 }
 
 ul,
@@ -60,7 +60,7 @@ a:hover {
 
 /* HEADER ------------------------------------------------------------------ */
 #logoImage img {
-  margin-top: 10px;
+  margin-top: 1vh;
   width: 350px;
   transition: 0.3s ease;
   opacity: 0.8;
@@ -78,50 +78,32 @@ a:hover {
   right: 0;
   margin-top: 160px;
   z-index: 1;
-  /* padding-bottom: 40px; */
+  padding-bottom: 40px;
 }
 
 #topNav nav a {
   font-size: 14px;
   line-height: 1.5em;
   margin: 0.8em;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.btn {
-  width: 100px;
-  padding: 10px;
-  margin: 0 auto;
-  border: none;
-  transition: 0.4s ease;
-  color: var(--lgrey);
-  background-color: var(--black);
-}
-
-.btn.active,
-.btn:active,
-.btn:hover {
-  color: var(--black);
-  background-color: var(--lgrey);
-  transition: 0.7s ease;
-}
-
 /* projects PREVIEW -------------------------------------------------------- */
-.projects {
+#projects {
   margin: 0 auto;
   display: grid;
-  grid-gap: 1.5rem;
+  gap: 1.5rem;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 300px);
 }
 
-.projects .project {
+.project {
   overflow: hidden;
 }
 
-.projects img {
+.project img {
   object-fit: cover;
   margin: auto;
   width: 100%;
@@ -129,7 +111,7 @@ a:hover {
   transition: transform 0.2s ease-in-out;
 }
 
-.projects img:hover {
+.project img:hover {
   transform: scale(1.15);
 }
 
@@ -146,8 +128,8 @@ a:hover {
   padding: 10px;
   color: var(--dgrey);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
   font-size: 14px;
+  letter-spacing: 0.08rem;
 }
 
 #filterButton + label:after {
@@ -210,13 +192,13 @@ input[type="radio"] {
   color: var(--black);
 }
 
-[value="All"]:checked ~ .projects [data-category] {
+[value="All"]:checked ~ #projects [data-category] {
   display: block;
 }
 
-[value="ReactJS"]:checked ~ .projects .project:not([data-category~="ReactJS"]),
-[value="C++"]:checked ~ .projects .project:not([data-category~="C++"]),
-[value="Python"]:checked ~ .projects .project:not([data-category~="Python"]) {
+[value="ReactJS"]:checked ~ #projects .project:not([data-category~="ReactJS"]),
+[value="C++"]:checked ~ #projects .project:not([data-category~="C++"]),
+[value="Python"]:checked ~ #projects .project:not([data-category~="Python"]) {
   display: none;
 }
 
