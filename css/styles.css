@@ -215,6 +215,7 @@ input[type="radio"] {
 #accountsTop img {
   width: 56px;
   height: auto;
+  border-radius: 50%;
 }
 
 .columns {
