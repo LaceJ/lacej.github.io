@@ -28,6 +28,7 @@ body {
   text-align: center;
   margin: 0;
   margin-top: 1vh;
+  /* position: relative; */
 }
 
 ul,
@@ -55,12 +56,14 @@ a:hover {
 
 #pageContent {
   width: 70%;
-  margin: auto;
+  /* display: inline-block; */
+  margin: 0 auto;
 }
 
 /* HEADER ------------------------------------------------------------------ */
 #logoImage img {
   margin-top: 1vh;
+  margin-left: -20px;
   width: 350px;
   transition: 0.3s ease;
   opacity: 0.8;
@@ -81,16 +84,23 @@ a:hover {
   padding-bottom: 40px;
 }
 
+#topNav nav {
+  display: grid;
+  grid-gap: 18px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 92px);
+}
+
 #topNav nav a {
   font-size: 14px;
   line-height: 1.5em;
-  margin: 0.8em;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   cursor: pointer;
+  text-align: left;
 }
 
-/* projects PREVIEW -------------------------------------------------------- */
+/* PROJECTS PREVIEW -------------------------------------------------------- */
 #projects {
   margin: 0 auto;
   display: grid;
@@ -203,26 +213,33 @@ input[type="radio"] {
 }
 
 /* ABOUT ------------------------------------------------------------------- */
-#accountsTop li {
-  display: inline-block;
-  padding: 0 0.8rem 0.8rem 0.8em;
+#accountsTop {
+  display: grid;
+  grid-gap: 0 16px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 416px);
+}
+
+.accountRow {
+  display: grid;
+  grid-gap: 0 16px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 128px);
+  margin-bottom: 16px;
 }
 
 .social {
-  width: 100px;
-  height: 100%;
-  margin-left: 16.2px;
+  width: 100%;
 }
 
 .social svg {
   transition: 0.3s ease;
-  height: 100%;
   fill: var(--lgrey);
   margin: 0 auto;
   display: block;
   border: 4px solid var(--lgrey);
-  padding: 10%;
-  /* border-radius: 50%; */
+  height: 80px;
+  padding: 20px;
 }
 
 .github:hover svg {
@@ -250,25 +267,23 @@ input[type="radio"] {
 }
 
 .columns {
-  margin: 0 auto;
   display: grid;
   grid-gap: 1rem;
   text-align: left;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, 416px);
 }
 
-.columns p {
+.columns p, h2, h3 {
   margin-bottom: 12px;
 }
 
-.columns h2 {
-  margin-bottom: 12px;
+.columns h3 {
+  margin-top: -5px;
 }
 
 .column img {
   width: 100%;
-  min-width: 400px;
 }
 
 #gpgkey {
@@ -276,6 +291,16 @@ input[type="radio"] {
   background-color: var(--black);
   text-align: center;
 }
+
+.gpgkey {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+
+}
+
 
 /* DELIBERATE 404 ---------------------------------------------------------- */
 .notfound p {
