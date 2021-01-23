@@ -18,6 +18,8 @@
 html {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  min-height: 100%;
+  position: relative;
 }
 
 body {
@@ -28,7 +30,7 @@ body {
   text-align: center;
   margin: 0;
   margin-top: 1vh;
-  /* position: relative; */
+  margin-bottom: 80px;
 }
 
 ul,
@@ -57,6 +59,7 @@ a:hover {
 #pageContent {
   width: 70%;
   /* display: inline-block; */
+  position: relative;
   margin: 0 auto;
 }
 
@@ -224,7 +227,7 @@ input[type="radio"] {
   display: grid;
   grid-gap: 0 16px;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 128px);
+  grid-template-columns: repeat(3, 128px);
   margin-bottom: 16px;
 }
 
@@ -290,15 +293,15 @@ input[type="radio"] {
   color: var(--lgrey);
   background-color: var(--black);
   text-align: center;
+  height: 1em;
+  width: 24em;
 }
 
-.gpgkey {
-  position: fixed;
+footer {
+  position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  margin-bottom: 10px;
-
+  width: 100%;
+  height: 80px;
 }
 
 
