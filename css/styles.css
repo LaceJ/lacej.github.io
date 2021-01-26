@@ -16,9 +16,10 @@
 }
 
 html {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  min-height: 100%;
+  /* -ms-overflow-style: none;
+  scrollbar-width: none; */
+  min-height: 100% !important;
+  height: 100%;
   position: relative;
 }
 
@@ -29,8 +30,9 @@ body {
   line-height: 1.8em;
   text-align: center;
   margin: 0;
-  margin-top: 1vh;
+  /* margin-top: 1vh; */
   margin-bottom: 80px;
+  height: 100%;
 }
 
 ul,
@@ -57,15 +59,17 @@ a:hover {
 }
 
 #pageContent {
-  width: 70%;
+  height: 100%;
+  /* float: left;
+  width: 100%; */
   /* display: inline-block; */
-  position: relative;
-  margin: 0 auto;
+  /* position: relative;
+  margin: 0 auto; */
+  /* display: flex */
 }
 
 /* HEADER ------------------------------------------------------------------ */
 #logoImage img {
-  margin-top: 1vh;
   margin-left: -20px;
   width: 350px;
   transition: 0.3s ease;
@@ -107,9 +111,9 @@ a:hover {
 #projects {
   margin: 0 auto;
   display: grid;
-  gap: 1.5rem;
+  grid-gap: 0 16px;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, 200px);
 }
 
 .project {
@@ -120,8 +124,9 @@ a:hover {
   object-fit: cover;
   margin: auto;
   width: 100%;
-  height: 16rem;
+  height: 160px;
   transition: transform 0.2s ease-in-out;
+  margin-bottom: 10px;
 }
 
 .project img:hover {
@@ -129,7 +134,7 @@ a:hover {
 }
 
 /* FILTERS ------------------------------------------------------------------ */
-#filterButton {
+/* #filterButton {
   position: absolute;
   appearance: none;
   left: -100%;
@@ -146,7 +151,7 @@ a:hover {
 }
 
 #filterButton + label:after {
-  display: inline-block; /* doesn't animate without this? */
+  display: inline-block;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   -ms-transition: -ms-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -154,7 +159,7 @@ a:hover {
 }
 
 #filterButton:checked + label:after {
-  display: inline-block; /* doesn't animate without this? */
+  display: inline-block;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -213,7 +218,7 @@ input[type="radio"] {
 [value="C++"]:checked ~ #projects .project:not([data-category~="C++"]),
 [value="Python"]:checked ~ #projects .project:not([data-category~="Python"]) {
   display: none;
-}
+} */
 
 /* ABOUT ------------------------------------------------------------------- */
 #accountsTop {
@@ -237,18 +242,18 @@ input[type="radio"] {
 
 .social svg {
   transition: 0.3s ease;
-  fill: var(--lgrey);
+  fill: var(--dgrey);
   margin: 0 auto;
   display: block;
-  border: 4px solid var(--lgrey);
+  border: 4px solid var(--dgrey);
   height: 80px;
   padding: 20px;
 }
 
 .github:hover svg {
   transition: 0.3s ease;
-  fill: #333;
-  border-color: #333;
+  fill: var(--lgrey);
+  border-color: var(--lgrey);
 }
 
 .linkedin:hover svg {
@@ -294,14 +299,14 @@ input[type="radio"] {
   background-color: var(--black);
   text-align: center;
   height: 1em;
-  width: 24em;
+  width: 310px;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   width: 100%;
-  height: 80px;
+  /* height: 80px; */
 }
 
 
@@ -386,3 +391,215 @@ footer {
 
 /* TESTING ----------------------------------------------------------------- */
 
+.categories {
+  display: grid;
+  grid-gap: 0 16px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 128px);
+  margin-bottom: 20px;
+  /* vertical-align: middle; */
+  /* text-align: center; */
+}
+
+.category {
+  font-weight: bold;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.category a {
+  color: var(--dgrey);
+  border: 3px solid var(--dgrey);
+  height: 40px;
+  width: 100%;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+  /* display: inline-block;
+  vertical-align: middle */
+}
+
+.category a:hover {
+  color: var(--lgrey);
+  border: 3px solid var(--lgrey);
+  cursor: pointer;
+}
+
+hr {
+  height: 3px;
+  background-color: var(--dgrey);
+  border: none;
+  width: 1280px;
+  margin: auto;
+}
+
+.categoryheader {
+  height: 40px;
+  background-color: var(--dgrey);
+}
+
+.projectcontainer {
+  width: 1280px;
+}
+
+.sidebar {
+  float: left;
+  /* position: relative; */
+}
+
+.sidebar {
+  /* max-width: 326px; */
+  /* width: 17%; */
+  width: 326px;
+  height: 100%;
+  /* background-color: greenyellow; */
+  /* position: absolute; */
+}
+
+
+#pageContenttest {
+  /* float: left;
+  width: 100%; */
+  /* display: inline-block; */
+  /* position: relative;
+  margin: 0 auto; */
+  /* height: 100%; */
+  display: flex;
+  position: relative;
+}
+
+
+.accountRowtest {
+  display: grid;
+  grid-gap: 16px 16px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 148px);
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.nsocial {
+  /* width: 100%; */
+}
+
+.nsocial svg {
+  transition: 0.3s ease;
+  fill: var(--dgrey);
+  margin: 0 auto;
+  display: block;
+  border: 4px solid var(--dgrey);
+  height: 90px;
+  padding: 25px;
+}
+
+#logoImagetest {
+  text-align: left;
+  
+}
+
+#logoImagetest img {
+  /* margin-left: -20px; */
+  /* width: 300px; */
+  width: 90%;
+  transition: 0.3s ease;
+  opacity: 0.8;
+  /* left: 0; */
+  z-index: 2;
+  margin-top: 10px;
+}
+
+#logoImagetest img:hover {
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.sidebar h4 {
+  /* width: 90%; */
+  position: absolute;
+  /* left: 0;
+  right: 0; */
+  margin-top: 140px;
+  margin-left: 16px;
+  z-index: 1;
+}
+
+.gpg {
+  /* position: absolute; */
+
+  /* position: fixed; 
+  bottom:0; */
+  /* left: 0; */
+  /* width: 100%; */
+  /* height: 40px; */
+}
+
+.sideText p {
+  text-align: left;
+  margin: 10px 10px;
+}
+
+.mainContent {
+  /* float: right; */
+  /* margin-left: 360px; */
+  /* max-width: 100%; */
+  justify-content: center;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 656px 640px;
+  grid-gap: 16px;
+  /* background-color: red; */
+}
+
+.projHead {
+  /* flex: 1; */
+  margin-top: 10px;
+  position:relative;
+  max-width: 640px;
+  height: 44px;
+  background-color: #666;
+
+}
+
+.projBox {
+  position:absolute; 
+  top: 60px;
+  display: grid;
+  grid-gap: 16px 16px;
+  /* justify-content: center; */
+  grid-template-columns: repeat(2, 312px);
+}
+
+.proj {
+  width: 312px;
+  height: 312px;
+  background-color:#E1306C;
+
+}
+
+#ngpgkey {
+  color: var(--lgrey);
+  background-color: var(--dgrey);
+  text-align: center;
+  height: 1em;
+  width: 16.2vw;
+}
+
+#footer {
+  /* display: flex; */
+  bottom: 0; 
+  position: absolute; 
+  left: 6px;
+}
