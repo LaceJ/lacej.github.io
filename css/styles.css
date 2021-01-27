@@ -29,8 +29,6 @@ body {
   line-height: 1.8em;
   text-align: center;
   margin: 0;
-  margin-top: 1vh;
-  margin-bottom: 80px;
 }
 
 ul,
@@ -57,7 +55,7 @@ a:hover {
 }
 
 #pageContent {
-  width: 70%;
+  width: 90%;
   /* display: inline-block; */
   position: relative;
   margin: 0 auto;
@@ -104,7 +102,7 @@ a:hover {
 }
 
 /* PROJECTS PREVIEW -------------------------------------------------------- */
-#projects {
+/* #projects {
   margin: 0 auto;
   display: grid;
   gap: 1.5rem;
@@ -126,7 +124,7 @@ a:hover {
 
 .project img:hover {
   transform: scale(1.15);
-}
+} */
 
 /* FILTERS ------------------------------------------------------------------ */
 #filterButton {
@@ -386,3 +384,101 @@ footer {
 
 /* TESTING ----------------------------------------------------------------- */
 
+.projectPage {
+  display: grid;
+  grid-gap: 16px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 640px);
+}
+
+.projectGroup {
+  width: 640px;
+  /* background-color: cornflowerblue; */
+}
+.projectsHeader {
+  height: 40px;
+  width: 640px;
+  background-color: coral;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.projects {
+  display: grid;
+  grid-gap: 16px;
+  justify-content: center;
+  grid-template-columns: repeat(2, 312px);
+}
+
+.project {
+  height: 312px;
+  width: 312px;
+  overflow: hidden;
+  /* display: flex; */
+  /* justify-content: center; */
+  text-align: left;
+  background-color: aquamarine;
+}
+
+.project img {
+  /* max-width: 312px; */
+  height: 272px;
+  /* display: block;
+  margin: 0 auto; */
+  
+  /* object-fit: cover; */
+}
+
+.projects .post-title {
+  font-size: 1.3rem;
+}
+
+.projects .post-title:hover {
+  text-decoration: underline;
+}
+
+
+.projects figcaption {
+  /* padding: 1rem; */
+}
+
+.projects .post-categories {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.projects .post-categories * {
+  display: inline-block;
+}
+
+.projects .post-categories li a {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  line-height: normal;
+  transition: all 0.1s;
+  color: var(--white);
+  background-color: var(--dgrey);
+}
+
+/* .projects .post-categories h2 {
+  float: left;
+  display: inline-block;
+} */
+
+.projects h2 a {
+  /* float: left; */
+  /* display: inline-block; */
+  /* color: red; */
+}
+.projects .post-categories ol li a {
+  /* display: inline-block; */
+  /* float: right; */
+}
+
+.projects .post-categories li a:hover {
+  /* display: inline-block; */
+  /* float: right; */
+  color: var(--dgrey);
+  background-color: transparent;
+  border: 1px solid var(--dgrey);
+}

@@ -62,58 +62,145 @@
 	</header>
 
 	<section id="pageContent">
-		<input type="checkbox" name="filterButton" id="filterButton" />
-		<label for="filterButton">Categories</label>
-
-		<input type="radio" id="All" name="categories" value="All" checked>
-		<input type="radio" id="ReactJS" name="categories" value="ReactJS">
-		<input type="radio" id="C++" name="categories" value="C++">
-		<input type="radio" id="Python" name="categories" value="Python">
-		<ol id="slideNav" class="filters">
-			<li>
-				<label for="All">All</label>
-			</li>
-			<li>
-				<label for="ReactJS">ReactJS</label>
-			</li>
-			<li>
-				<label for="C++">C++</label>
-			</li>
-			<li>
-				<label for="Python">Python</label>
-			</li>
-		</ol>
-		<ol id="projects">
-			<li class="project" data-category="Python">
-				<a href="underconstruction.html">
-					<img src="images/pathfinding.png" alt="">
-					<p>Project 1</p>
-				</a>
-			</li>
-			<li class="project" data-category="ReactJS">
-				<a href="underconstruction.html">
-					<img src="images/travelling.png" alt="">
-					<p>Project 2</p>
-				</a>
-			</li>
-			<li class="project" data-category="C++ Python">
-				<a href="underconstruction.html">
-					<img src="images/sorting.png" alt="">
-					<p>Project 2</p>
-				</a>
-			</li>
-			<li class="project" data-category="C++">
-				<a href="underconstruction.html">
-					<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg"
-						alt="">
-					<p>Project 4</p>
-				</a>
-			</li>
-		</ol>
+		<div class="projectPage">
+			<div class="projectGroup">
+				<div class="projectsHeader">
+					Programming
+				</div>
+				<div class="projects">
+					<div class="project react">
+						<img src="images/travelling.png" alt="">
+						<figcaption>
+							<!-- <h2 class="post-title">
+								<a href="" target="_blank">
+									Project 1
+								</a>
+							</h2> -->
+							<ol class="post-categories">
+								<li>
+								  	<a href="">ReactJS</a>
+								</li>
+							</ol>
+						</figcaption>
+					</div>
+					<div class="project react">
+						<img src="images/pathfinding.png" alt="">
+						<figcaption>
+							<!-- <h2 class="post-title">
+								<a href="" target="_blank">
+									Project 1
+								</a>
+							</h2> -->
+							<ol class="post-categories">
+								<li>
+								  	<a href="">ReactJS</a>
+								</li>
+							</ol>
+						</figcaption>
+					</div>
+					<div class="project python">
+						<img src="https://assets.wired.com/photos/w_1025/wp-content/uploads/2014/04/cuttlefish-11.jpg" alt="">
+						<figcaption>
+							<!-- <h2 class="post-title">
+								<a href="" target="_blank">
+									Project 1
+								</a>
+							</h2> -->
+							<ol class="post-categories">
+								<li>
+								  	<a href="">Python</a>
+								</li>
+							</ol>
+						</figcaption>
+					</div>
+					<div class="project">
+						<img src="images/sorting.png" alt="">
+						<figcaption>
+							<!-- <h2 class="post-title">
+								<a href="" target="_blank">
+									Project 1
+								</a>
+							</h2> -->
+							<ol class="post-categories">
+								<li>
+								  	<a href="">C++</a>
+								</li>
+							</ol>
+						</figcaption>
+					</div>
+				</div>
+			</div>
+			<div class="projectGroup">
+				<div class="projectsHeader">
+					Misc
+				</div>
+				<div class="projects">
+					<div class="project animation">
+						<img src="" alt="">
+						<figcaption>
+							<!-- <h2 class="post-title">
+								<a href="" target="_blank">
+									Project 1
+								</a>
+							</h2> -->
+							<ol class="post-categories">
+								<li>
+								  	<a href="">Animation</a>
+								</li>
+							</ol>
+						</figcaption>
+					</div>
+					<div class="project animation">
+						<img src="" alt="">
+						<figcaption>
+							<!-- <h2 class="post-title">
+								<a href="" target="_blank">
+									Project 1
+								</a>
+							</h2> -->
+							<ol class="post-categories">
+								<li>
+								  	<a href="">Animation</a>
+								</li>
+							</ol>
+						</figcaption>
+					</div>
+					<div class="project video">
+						<img src="" alt="">
+						<figcaption>
+							<!-- <h2 class="post-title">
+								<a href="" target="_blank">
+									Project 1
+								</a>
+							</h2> -->
+							<ol class="post-categories">
+								<li>
+								  	<a href="">Video Essay</a>
+								</li>
+							</ol>
+						</figcaption>
+					</div>
+					<div class="project political">
+						<img src="" alt="">
+						<figcaption>
+							<!-- <h2 class="post-title">
+								<a href="" target="_blank">
+									Project 1
+								</a>
+							</h2> -->
+							<ol class="post-categories">
+								<li>
+								  	<a href="">Political</a>
+								</li>
+							</ol>
+						</figcaption>
+					</div>
+				</div>
+			</div>
 	</section>
 
-	<footer>
-	</footer>
+	<!-- <footer>
+	</footer> -->
 
 	<script>
 		//Toggles the slide down menu
