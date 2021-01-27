@@ -414,19 +414,8 @@ footer {
   height: 312px;
   width: 312px;
   overflow: hidden;
-  /* display: flex; */
-  /* justify-content: center; */
   text-align: left;
   background-color: aquamarine;
-}
-
-.project img {
-  /* max-width: 312px; */
-  height: 272px;
-  /* display: block;
-  margin: 0 auto; */
-  
-  /* object-fit: cover; */
 }
 
 .projects .post-title {
@@ -481,4 +470,32 @@ footer {
   color: var(--dgrey);
   background-color: transparent;
   border: 1px solid var(--dgrey);
+}
+
+.project img {
+  height: 272px;
+  min-width: 312px;
+  object-fit: cover;
+  object-position: 50% 0;
+  margin: auto;
+  display: block;
+}
+
+
+.imagestack {
+  display: grid;
+  justify-content: center;
+  /* align-items: initial; */
+  grid-template-columns: repeat(1, 312px);
+}
+
+
+.image:first-of-type {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.image:last-of-type {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
 }
